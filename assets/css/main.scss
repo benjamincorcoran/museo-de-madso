@@ -1,0 +1,48 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// Customisation 
+
+// Get Alfa Salb One and Ephesis Fonts
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ephesis&display=swap');
+
+.alfa-slab-one-regular {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ephesis-regular {
+    font-family: "Ephesis", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5 {
+    @extend .alfa-slab-one-regular;
+}
+
+.specimen-label {
+    @extend p;
+    font-family: mono !important;
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important;
+}
+
+.initial-content a {
+    color: #000000;
+}
+.initial-content a:visited {
+    color:#000000;
+}
+
+.explore {
+    @extend .text-center;
+}

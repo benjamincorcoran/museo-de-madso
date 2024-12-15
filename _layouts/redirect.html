@@ -1,0 +1,14 @@
+{% assign spliturl = page.redirect.to | split: '/' %}
+{% assign specimen_name = spliturl[-1] | replace: '.html', '' %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <meta charset="utf-8">
+  <title>Redirecting&hellip;</title>
+  <link rel="canonical" href="/collection/{{specimen_name}}">
+  <script>location="/collection/{{specimen_name}}"</script>
+  <meta http-equiv="refresh" content="0; url=/collection/{{specimen_name}}">
+  <meta name="robots" content="noindex">
+  <h1>Redirecting&hellip;</h1>
+  <a href="/collection/{{specimen_name}}">Click here if you are not redirected.</a>
+</html>
